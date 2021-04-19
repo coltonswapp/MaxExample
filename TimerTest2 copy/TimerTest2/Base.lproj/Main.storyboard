@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimerTest2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="85" translatesAutoresizingMaskIntoConstraints="NO" id="V3w-cJ-Gb2">
+                                <rect key="frame" x="67.666666666666686" y="172" width="255" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fg-Uw-xJo">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="VOA-Wx-TSy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="START"/>
+                                        <connections>
+                                            <action selector="startStopButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEc-xU-qbv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmu-qh-4RG">
+                                        <rect key="frame" x="170" y="0.0" width="85" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="mkg-Sm-bem"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="RESET"/>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X5Q-4e-tj6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bA8-YR-v5m">
+                                <rect key="frame" x="85" y="69" width="220" height="70"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="42"/>
+                                <state key="normal" title="00:00">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="longPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H2X-xc-lHb"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="37N-ni-12G">
+                                <rect key="frame" x="70" y="243" width="250" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oba-JO-g83">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="r7P-9U-cVX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Time">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="printTimeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hIv-4e-Veu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1Q-4P-Cw5">
+                                        <rect key="frame" x="165" y="0.0" width="85" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="chy-1I-Y8r"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Minute">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="printMinuteButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2JL-fH-14S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZF-VF-yjZ" customClass="QuickTallyButton" customModule="TimerTest2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="399.66666666666669" width="250" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="1zw-o9-UnW"/>
+                                    <constraint firstAttribute="width" constant="250" id="hty-5v-acv"/>
+                                </constraints>
+                                <state key="normal" title="Rock On"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="37N-ni-12G" secondAttribute="trailing" constant="70" id="0S7-RA-9rd"/>
+                            <constraint firstItem="V3w-cJ-Gb2" firstAttribute="top" secondItem="bA8-YR-v5m" secondAttribute="bottom" constant="33" id="0ja-AJ-xI1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bA8-YR-v5m" secondAttribute="trailing" constant="85" id="9pi-8v-qqM"/>
+                            <constraint firstItem="bA8-YR-v5m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="ATG-71-bRa"/>
+                            <constraint firstItem="aZF-VF-yjZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="CbX-sP-Jab"/>
+                            <constraint firstItem="37N-ni-12G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Ce8-6f-GS1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V3w-cJ-Gb2" secondAttribute="trailing" constant="67.5" id="KrC-JY-16U"/>
+                            <constraint firstItem="bA8-YR-v5m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="SSA-7W-UsA"/>
+                            <constraint firstItem="37N-ni-12G" firstAttribute="top" secondItem="V3w-cJ-Gb2" secondAttribute="bottom" constant="33" id="knB-yP-2T3"/>
+                            <constraint firstItem="aZF-VF-yjZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="l6c-gF-N4k"/>
+                            <constraint firstItem="V3w-cJ-Gb2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67.5" id="wsg-cU-MbN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="aZF-VF-yjZ" id="aFc-ub-epr"/>
+                        <outlet property="printMinuteButton" destination="j1Q-4P-Cw5" id="6OH-vM-tyV"/>
+                        <outlet property="printTimeButton" destination="oba-JO-g83" id="ctS-Cq-cDY"/>
+                        <outlet property="resetButton" destination="Zmu-qh-4RG" id="Htm-B5-dUy"/>
+                        <outlet property="startStopButton" destination="5fg-Uw-xJo" id="QyA-cM-AaI"/>
+                        <outlet property="timerLabel" destination="bA8-YR-v5m" id="oGg-I4-KaY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.38461538461539" y="118.00947867298578"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
